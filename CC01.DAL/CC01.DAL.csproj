@@ -84,5 +84,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CC01.BO\CC01.BO.csproj">
+      <Project>{526e6066-6599-4931-8655-748b1f60fe42}</Project>
+      <Name>CC01.BO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
