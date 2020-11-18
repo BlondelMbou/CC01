@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC01.DAL", "CC01.DAL\CC01.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC01.BLL", "CC01.BLL\CC01.BLL.csproj", "{DE996FFB-81D7-45AF-9FD8-10CCB12987C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC01.WindForms", "CC01.WindForms\CC01.WindForms.csproj", "{35B6F5AB-3CA6-44D6-A5F4-CB6CA113ECFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DE996FFB-81D7-45AF-9FD8-10CCB12987C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE996FFB-81D7-45AF-9FD8-10CCB12987C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE996FFB-81D7-45AF-9FD8-10CCB12987C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35B6F5AB-3CA6-44D6-A5F4-CB6CA113ECFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35B6F5AB-3CA6-44D6-A5F4-CB6CA113ECFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35B6F5AB-3CA6-44D6-A5F4-CB6CA113ECFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35B6F5AB-3CA6-44D6-A5F4-CB6CA113ECFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
