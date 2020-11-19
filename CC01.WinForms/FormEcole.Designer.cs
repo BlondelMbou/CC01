@@ -129,22 +129,26 @@ namespace CC01.WindForms
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Matricule,
             this.Nom,
             this.Sexe});
-            this.dataGridView1.Location = new System.Drawing.Point(206, 127);
+            this.dataGridView1.Location = new System.Drawing.Point(206, 102);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(351, 290);
+            this.dataGridView1.Size = new System.Drawing.Size(351, 315);
             this.dataGridView1.TabIndex = 21;
             // 
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(206, 70);
+            this.textBox8.Location = new System.Drawing.Point(259, 70);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(351, 26);
+            this.textBox8.Size = new System.Drawing.Size(298, 26);
             this.textBox8.TabIndex = 20;
             // 
             // lblSearch
@@ -152,7 +156,7 @@ namespace CC01.WindForms
             this.lblSearch.AutoSize = true;
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(217, 30);
+            this.lblSearch.Location = new System.Drawing.Point(203, 70);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(58, 16);
             this.lblSearch.TabIndex = 19;

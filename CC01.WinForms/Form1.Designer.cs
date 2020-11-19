@@ -47,13 +47,14 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Matricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCreer = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.btnImprimer = new System.Windows.Forms.Button();
-            this.Matricule = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sexe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -218,9 +219,9 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(517, 38);
+            this.textBox8.Location = new System.Drawing.Point(572, 38);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(351, 26);
+            this.textBox8.Size = new System.Drawing.Size(296, 26);
             this.textBox8.TabIndex = 17;
             // 
             // lblSearch
@@ -228,7 +229,7 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(514, 19);
+            this.lblSearch.Location = new System.Drawing.Point(514, 46);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(58, 16);
             this.lblSearch.TabIndex = 16;
@@ -236,6 +237,10 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Matricule,
@@ -245,52 +250,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(351, 227);
             this.dataGridView1.TabIndex = 18;
-            // 
-            // btnCreer
-            // 
-            this.btnCreer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnCreer.Location = new System.Drawing.Point(45, 350);
-            this.btnCreer.Name = "btnCreer";
-            this.btnCreer.Size = new System.Drawing.Size(135, 55);
-            this.btnCreer.TabIndex = 19;
-            this.btnCreer.Text = "Créer";
-            this.btnCreer.UseVisualStyleBackColor = true;
-            // 
-            // btnModifier
-            // 
-            this.btnModifier.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModifier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnModifier.Location = new System.Drawing.Point(257, 350);
-            this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(138, 55);
-            this.btnModifier.TabIndex = 20;
-            this.btnModifier.Text = "Modifier";
-            this.btnModifier.UseVisualStyleBackColor = true;
-            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
-            // 
-            // btnSupprimer
-            // 
-            this.btnSupprimer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupprimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnSupprimer.Location = new System.Drawing.Point(465, 350);
-            this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(135, 55);
-            this.btnSupprimer.TabIndex = 21;
-            this.btnSupprimer.Text = "Supprimer";
-            this.btnSupprimer.UseVisualStyleBackColor = true;
-            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
-            // 
-            // btnImprimer
-            // 
-            this.btnImprimer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnImprimer.Location = new System.Drawing.Point(685, 350);
-            this.btnImprimer.Name = "btnImprimer";
-            this.btnImprimer.Size = new System.Drawing.Size(129, 55);
-            this.btnImprimer.TabIndex = 22;
-            this.btnImprimer.Text = "Imprimer";
-            this.btnImprimer.UseVisualStyleBackColor = true;
             // 
             // Matricule
             // 
@@ -307,12 +266,70 @@
             this.Sexe.HeaderText = "Sexe";
             this.Sexe.Name = "Sexe";
             // 
+            // btnCreer
+            // 
+            this.btnCreer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnCreer.Location = new System.Drawing.Point(206, 350);
+            this.btnCreer.Name = "btnCreer";
+            this.btnCreer.Size = new System.Drawing.Size(135, 55);
+            this.btnCreer.TabIndex = 19;
+            this.btnCreer.Text = "Créer";
+            this.btnCreer.UseVisualStyleBackColor = true;
+            // 
+            // btnModifier
+            // 
+            this.btnModifier.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModifier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnModifier.Location = new System.Drawing.Point(383, 350);
+            this.btnModifier.Name = "btnModifier";
+            this.btnModifier.Size = new System.Drawing.Size(138, 55);
+            this.btnModifier.TabIndex = 20;
+            this.btnModifier.Text = "Modifier";
+            this.btnModifier.UseVisualStyleBackColor = true;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
+            // 
+            // btnSupprimer
+            // 
+            this.btnSupprimer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupprimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSupprimer.Location = new System.Drawing.Point(572, 350);
+            this.btnSupprimer.Name = "btnSupprimer";
+            this.btnSupprimer.Size = new System.Drawing.Size(135, 55);
+            this.btnSupprimer.TabIndex = 21;
+            this.btnSupprimer.Text = "Supprimer";
+            this.btnSupprimer.UseVisualStyleBackColor = true;
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
+            // 
+            // btnImprimer
+            // 
+            this.btnImprimer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnImprimer.Location = new System.Drawing.Point(739, 350);
+            this.btnImprimer.Name = "btnImprimer";
+            this.btnImprimer.Size = new System.Drawing.Size(129, 55);
+            this.btnImprimer.TabIndex = 22;
+            this.btnImprimer.Text = "Imprimer";
+            this.btnImprimer.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(19, 350);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 55);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Enregistrer";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(880, 417);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnImprimer);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.btnModifier);
@@ -337,7 +354,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblNom);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "FormEtudiant";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -373,6 +390,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricule;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexe;
+        private System.Windows.Forms.Button button1;
     }
 }
 

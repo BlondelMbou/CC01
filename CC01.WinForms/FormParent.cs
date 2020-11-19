@@ -19,8 +19,12 @@ namespace CC01.WindForms
 
         private void LblInfosDeLetudiant_Click(object sender, EventArgs e)
         {
-            FormCarteEtudiant = new formCarteEtudaiant()
-            formCarteEtudaiant.show()
+           
+        }
+
+        private void lblSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
