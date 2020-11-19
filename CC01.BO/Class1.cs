@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace CC01.BO
 {
     public class Class1
-    {
+    { 
     }
 }

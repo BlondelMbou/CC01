@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace CC01.WindForms
 {
-    public partial class Form1 : Form
+    public partial class FormParent : Form
     {
-        public Form1()
+        public FormParent()
         {
             InitializeComponent();
+        }
+
+        private void LblInfosDeLetudiant_Click(object sender, EventArgs e)
+        {
+            FormCarteEtudiant = new formCarteEtudaiant()
+            formCarteEtudaiant.show()
         }
     }
 }
