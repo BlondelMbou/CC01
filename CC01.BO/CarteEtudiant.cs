@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CC01.BO
 {
-    class CarteEtudiant:Ecole
+    public class CarteEtudiant : Ecole
     {
         public String Nom { get; set; }
         public string Prenom { get; set; }
@@ -23,7 +23,7 @@ namespace CC01.BO
 
         }
 
-        public CarteEtudiant(string nom, string prenom, string matricule, int age, string sex, string numero_Tell, string classe, string Email string nom_Ecole) : base(nom_Ecole, contact_Ecole, email_Ecole)
+        public CarteEtudiant(string nom, string prenom, string matricule, int age, string sex, string numero_Tell, string classe, string Email, string nom_Ecole, string contact_Ecole, string email_Ecole) : base(nom_Ecole, contact_Ecole, email_Ecole)
         {
             Nom = nom;
             Prenom = prenom;
@@ -43,4 +43,3 @@ namespace CC01.BO
 
     }
 }
-

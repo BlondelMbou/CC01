@@ -26,5 +26,20 @@ namespace CC01.WindForms
         {
 
         }
+
+        private void etudiantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ecoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void etuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+      
+        }
     }
 }

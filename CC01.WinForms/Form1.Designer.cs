@@ -276,12 +276,13 @@
             this.btnCreer.TabIndex = 19;
             this.btnCreer.Text = "Créer";
             this.btnCreer.UseVisualStyleBackColor = true;
+            this.btnCreer.Click += new System.EventHandler(this.btnCreer_Click);
             // 
             // btnModifier
             // 
             this.btnModifier.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModifier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnModifier.Location = new System.Drawing.Point(383, 350);
+            this.btnModifier.Location = new System.Drawing.Point(730, 350);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(138, 55);
             this.btnModifier.TabIndex = 20;
@@ -293,7 +294,7 @@
             // 
             this.btnSupprimer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupprimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnSupprimer.Location = new System.Drawing.Point(572, 350);
+            this.btnSupprimer.Location = new System.Drawing.Point(397, 350);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(135, 55);
             this.btnSupprimer.TabIndex = 21;
@@ -305,12 +306,13 @@
             // 
             this.btnImprimer.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnImprimer.Location = new System.Drawing.Point(739, 350);
+            this.btnImprimer.Location = new System.Drawing.Point(572, 350);
             this.btnImprimer.Name = "btnImprimer";
             this.btnImprimer.Size = new System.Drawing.Size(129, 55);
             this.btnImprimer.TabIndex = 22;
             this.btnImprimer.Text = "Imprimer";
             this.btnImprimer.UseVisualStyleBackColor = true;
+            this.btnImprimer.Click += new System.EventHandler(this.btnImprimer_Click);
             // 
             // button1
             // 

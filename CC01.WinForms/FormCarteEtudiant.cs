@@ -36,32 +36,125 @@ namespace CC01.WindForms
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                if (MessageBox.Show("Confirmation ? ",
-                    "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (
+                    MessageBox.Show
+                    (
+                        "DO you want to delete?",
+                        "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question
+                    ) == DialogResult.Yes
+                )
                 {
                     for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
                     {
-                       CarteEtudiant.DeleteProduct(dataGridView1.SelectedRows[i].DataBoundItem as CarteEtudiant);
+                        etudiantBLO.DeleteCarteEtudiant(dataGridView1.SelectedRows[i].DataBoundItem as Etudiant);
                     }
                     loadData();
                 }
+            }
+        }
     }
-}
+
+
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+
+        }
+
+        private void btnImprimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCreer_Click(object sender, EventArgs e)
+        {
+            try
             {
-                for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                checkForm();
+                string filename = null;
+                if (!string.IsNullOrEmpty(pictureBox1.ImageLocation))
                 {
-                    Form f = new frmProductEdit
-                        (
-                            dataGridView1.SelectedRows[i].DataBoundItem as Product,
-                            loadData
-                        );
-                    f.ShowDialog();
+
+                    string ext = Path.GetExtension(pictureBox1.ImageLocation);
+                    filename = Guid.NewGuid().ToString() + ext;
+                    FileInfo fileSource = new FileInfo(pictureBox1.ImageLocation);
+                    string filePath = Path.Combine(ConfigurationManager.AppSettings["DbFolder"], "logo", filename);
+                    FileInfo fileDest = new FileInfo(filePath);
+                    if (!fileDest.Directory.Exists)
+                        fileDest.Directory.Create();
+                    fileSource.CopyTo(fileDest.FullName);
                 }
 
+                Etudiant newEtudiant = new Etudiant
+                (
+                    txtMatricule.Text.ToUpper(),
+                    txtNom.Text,
+                    txtPrenom.Text,
+                    txtClasse.Text,
+                    !string.IsNullOrEmpty(pictureBox1.ImageLocation) ? File.ReadAllBytes(pictureBox1.ImageLocation) : this.oldEtudiant?.Picture,
+                    filename
+                );
+                EtudiantBLO productBLO = new EtudiantBLO(ConfigurationManager.AppSettings["DbFolder"]);
+
+                if (this.oldEtudiant == null)
+                    productBLO.CreateCarteEtudiant(newEtudiant);
+                else
+                    etudiantBLO.EditEtudiant(oldEtudiant, newEtudiant);
+
+                MessageBox.Show
+                (
+                    "Save done !",
+                    "Confirmation",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                if (callBack != null)
+                    callBack();
+
+                if (oldEtudiant != null)
+                    Close();
+
+                txtMatricule.Clear();
+                txtNom.Clear();
+                txtPrenom.Clear();
+                txtClasse.Clear();
+                txtNom.Focus();
+
             }
+            catch (TypingException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Typing error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (DuplicateNameException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Duplicate error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+            catch (KeyNotFoundException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Not found error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+
         }
-    }        
+
+    }
+}
+}
