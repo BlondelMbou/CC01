@@ -17,13 +17,14 @@ namespace CC01.BO
 
         public string Classe { get; set; }
         public string Email { get; set; }
+        public byte Photo { get; set; }
 
         public CarteEtudiant() : base()
         {
 
         }
 
-        public CarteEtudiant(string nom, string prenom, string matricule, int age, string sex, string numero_Tell, string classe, string Email, string nom_Ecole, string contact_Ecole, string email_Ecole) : base(nom_Ecole, contact_Ecole, email_Ecole)
+        public CarteEtudiant(string nom, string prenom,byte photo, string matricule, int age, string sex, string numero_Tell, string classe, string Email, string nom_Ecole, string contact_Ecole, string email_Ecole) : base(nom_Ecole, contact_Ecole, email_Ecole)
         {
             Nom = nom;
             Prenom = prenom;
@@ -33,6 +34,7 @@ namespace CC01.BO
             Numero_Tell = numero_Tell;
             Classe = classe;
             Email = Email;
+            Photo = photo;
         }
 
         public override bool Equals(object obj)
